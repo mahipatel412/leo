@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+  <div class="output">
+    <input type="text">
+    <button>Search</button>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  
+    <script>
+const list = document.querySelector('.output ul');
+const searchInput = document.querySelector('.output input');
+const searchBtn = document.querySelector('.output button');
+
+list.innerHTML = '';
+
+const myHistory = [];
+const MAX_HISTORY = 5;
+
+searchBtn.onclick = () => {
+
+  if (searchInput.value !== '') {
+    myHistory.push();
+    
+    myHistory.unshift(searchInput.value);
+
+    list.innerHTML='';
+
+
+    for (const itemText of myHistory) {
+      const listItem = document.createElement('li');
+      listItem.textContent = itemText;
+      list.appendChild(listItem);
+    }
+
+    if (myHistory.length >= MAX_HISTORY) {
+      myHistory.pop();
+  }
+
+
+    searchInput.value = '';
+    searchInput.focus();
+  }
+}
+    </script>
+</body>
+</html>

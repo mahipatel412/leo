@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment-2</title>
+</head>
+<body>
+    <script>
+        const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+const formattedCities = cities.map(city => {
+  const lowercaseCity = city.toLowerCase();
+  return lowercaseCity.charAt(0).toUpperCase() + lowercaseCity.slice(1);
+});
+
+document.write(formattedCities);
+
+    </script>
+</body>
+</html>

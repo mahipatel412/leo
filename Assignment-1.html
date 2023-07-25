@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment-1</title>
+</head>
+<body>
+    <script>
+        const greetings = [
+  'Happy Birthday!',
+  'Merry Christmas my love',
+  'A happy Christmas to all the family',
+  'You\'re all I want for Christmas',
+  'Get well soon'
+];
+
+const Greetings = greetings.filter((message) => {
+  if (message.toLowerCase().includes('christmas')) {
+    return true; 
+  } else {
+    return false; 
+  }
+});
+
+document.write(Greetings);
+
+    </script>
+</body>
+</html>

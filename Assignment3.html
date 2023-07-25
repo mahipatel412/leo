@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                  'GNF576746573fhdg4737dh4;Greenfield',
+                  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                  'SYB4f65hf75f736463;Stalybridge',
+                  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+const formattedStations = stations.map(station => {
+  const parts = station.split(';'); // Split the string at the semicolon
+  const code = parts[0].slice(0, 3); // Extract the first three characters as the code
+  const name = parts[1]; // Extract the second part as the station name
+  document.write(`${code}: ${name}` + "<br>");
+});
+
+console.log(formattedStations);
+
+    </script>
+</body>
+</html>
